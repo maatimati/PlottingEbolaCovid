@@ -54,18 +54,20 @@ while True:
                     plt.xlabel("Giorni")
                     plt.ylabel("Persone")
                     plt.plot(giorniCovid, mortiCovid)
+                    plt.show()
                     break
                 elif rCovid == 'C' or rCovid == 'c':
                     plt.title("Casi Covid")
                     plt.xlabel("Giorni")
                     plt.ylabel("Persone")
                     plt.plot(giorniCovid, casiCovid)
+                    plt.show()
                     break
                 else:
                     print("\nE' stato inserito un valore non valido. Inserire M per ottenere il grafico dei morti oppure C per ottenere il grafico dei casi: ")
                     rCovid = input()
         case 2:
-            print("\nE' stato scelto Ebola. \nInserire M per ottenere il grafico dei morti oppure C per ottenere il grafico dei casi: ")
+            print("\nE' stato scelto Ebola. \nInserire M per ottenere il grafico dei morti, C per ottenere il grafico dei casi, T per il grafico sia dei morti che dei casi: ")
             rEbola = input()
             while True:
                 if rEbola == 'M' or rEbola == 'm':
@@ -73,12 +75,23 @@ while True:
                     plt.xlabel("Giorni")
                     plt.ylabel("Persone")
                     plt.plot(giorniEbola, mortiEbola)
+                    plt.show()
                     break
                 elif rEbola == 'C' or rEbola == 'c':
                     plt.title("Casi Ebola")
                     plt.xlabel("Giorni")
                     plt.ylabel("Persone")
                     plt.plot(giorniEbola, casiEbola)
+                    plt.show()
+                    break
+                elif rEbola == 'T' or rEbola == 't':
+                    plt.title("Ebola")
+                    plt.xlabel("Giorni")
+                    plt.ylabel("Persone")
+                    plt.plot(giorniEbola, casiEbola, "-b", label = "Casi")
+                    plt.plot(giorniEbola, mortiEbola, "-r", label = "Morti")
+                    plt.legend(loc="upper right")
+                    plt.show()
                     break
                 else:
                     print("\nE' stato inserito un valore non valido. Inserire M per ottenere il grafico dei morti oppure C per ottenere il grafico dei casi: ")
@@ -89,5 +102,3 @@ while True:
     if ch == 'N' or ch == 'n':
         print("Grazie di aver usato il programma :]")
         break
-
-plt.show()
