@@ -3,6 +3,8 @@
 #                        Covid nella ricerca:                     #
 #   "Studio del grafico probabile del coronavirus e dell'ebola    #
 #                  tramite modello SIS e SIR"                     #
+#                                                                 #
+#                  Autore: Matilde Albonetti                      #
 #----------#----------#----------#----------#----------#----------#
 
 import matplotlib.pyplot as plt
